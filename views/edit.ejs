@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Appointment</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .form-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .heading {
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: "Nerko One", cursive;
+      color: black;
+      font-weight: 500;
+  /* font-style: normal; */
+    }
+    .btn-custom {
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container form-container">
+    <h1 class="heading">Edit Appointment</h1>
+
+    <!-- Display error message if any -->
+    <% if (error) { %>
+      <div class="alert alert-danger" role="alert">
+        <%= error %>
+      </div>
+    <% } %>
+
+    <form action="/edit/<%= appointment._id %>" method="POST">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" value="<%= appointment.name %>" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" value="<%= appointment.email %>" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <!-- Set min attribute to current date -->
+        <input type="date" id="date" name="date" class="form-control" value="<%= appointment.date.toISOString().split('T')[0] %>" min="<%= new Date().toISOString().split('T')[0] %>" required>
+      </div>
+
+      <div class="form-group">
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" class="form-control" value="<%= appointment.time %>" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-custom">Update Appointment</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

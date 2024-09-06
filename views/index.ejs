@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Appointment App</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #4095c4, #ffffff); 
+      color: #333;
+    }
+
+    .header {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .header .title {
+      margin: 0;
+      font-size: 2.5em;
+      text-align: center;
+      flex: 1;
+      margin-left: 200px; /* Margin to move title slightly right */
+    }
+
+    .header .nav-buttons {
+      display: flex;
+      gap: 0px; /* Reduced gap between buttons */
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      font-weight: bold;
+      color: #fff;
+      background-color: #007BFF;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #3b34bc;
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .section {
+      margin: 40px 0;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      color: #007BFF;
+    }
+
+    .section p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .hero1 {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .footer {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 1em;
+    }
+
+    .why-choose-us {
+      text-align: center;
+    }
+
+    .why-choose-us p {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    .ad {
+      width: 100%;
+      text-decoration: none;
+      color: white;
+      font-size: larger;
+    }
+
+    .tile {
+      color: white;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">BRIGHT HORIZON HEALTH</h1>
+    <div class="nav-buttons">
+      <a href="/register" class="button">Register</a>
+      <a href="/login" class="button">Login</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="section">
+      <h2>Welcome to the Doctor Appointment App</h2>
+      <p>Manage your medical appointments with ease. Our app helps you book, track, and view your appointments all in one place. Whether you need a routine check-up or a specialized consultation, we have you covered.</p>
+      <a href="/book" class="button">Book an Appointment</a>
+      <a href="/appointments" class="button">View Appointments</a>
+    </section>
+
+    <section class="section why-choose-us">
+      <h2>Why Choose Us?</h2>
+      <img src="/images/Daco_4739384.png" alt="text" class="hero"><br>
+      <p>Our app offers a seamless experience for managing your health appointments. Here’s why you should choose us:</p>
+      <p>Easy online booking and rescheduling</p>
+      <p>View and manage your appointment history</p>
+      <p>Receive reminders and notifications</p>
+      <p>Access a wide range of medical specialists</p>
+    </section>
+
+    <section class="section">
+      <h2>How It Works</h2>
+      <img src="/images/appointments.jpg" alt="app" class="hero1"><br><br>
+      <p>Getting started with our app is simple:</p>
+      <p>Sign up or log in to your account.</p>
+      <p>Choose your preferred doctor and available time slot.</p>
+      <p>Confirm your appointment and receive a confirmation.</p>
+      <p>Manage and view your appointments anytime.</p>
+    </section>
+
+    <section class="section">
+      <img src="/images/Doctor.jpg" alt="Doctor" class="hero-image">
+    </section>
+  </div>
+
+  <footer class="footer">
+    <a href="https://github.com/Rupali053" alt="github" class="ad">Follow Us</a><br>
+    <a href="https://wecarehealthcenter.org/" alt="github1" class="ad">Follow Us For More Doctors</a><br>
+    <p>&copy; 2024 Doctor Appointment App. All rights reserved.</p>
+  </footer>
+</body>
+</html>
